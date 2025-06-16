@@ -13,7 +13,7 @@ const FoodDetails = () => {
     const getItem = async () => {
       try {
         const { data } = await axios.get(
-          `${import.meta.env.VITE_DEV_URL}/food/getItem/${id}`
+          `https://food-waste-reduction-qy4m.onrender.com/food/getItem/${id}`
         );
         setFoodItem(data[0]); // Access first item from the response array
       } catch (err) {
