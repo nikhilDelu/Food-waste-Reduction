@@ -9,7 +9,7 @@ const Home = () => {
     const email = localStorage.getItem("email");
     // console.log(import.meta.env.VITE_DEV_URL);
     try {
-      const { data } = await axios.post(`${import.meta.env.VITE_DEV_URL}/food`, {
+      const { data } = await axios.post(`https://food-waste-reduction-qy4m.onrender.com/food`, {
         email,
       });
       setItems(data);
