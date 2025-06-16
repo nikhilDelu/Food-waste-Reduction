@@ -26,7 +26,7 @@ export default function LoginOrRegister() {
   const checkUser = () => {
     if (localStorage.getItem("email")) {
       try {
-        axios.post(`${import.meta.env.VITE_DEV_URL}/auth/jwt`, {}, {
+        axios.post(`https://food-waste-reduction-qy4m.onrender.com/auth/jwt`, {}, {
           withCredentials: true,
         }).then((response) => {
           console.log(response);
