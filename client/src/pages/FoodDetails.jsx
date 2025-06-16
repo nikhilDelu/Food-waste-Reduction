@@ -30,7 +30,7 @@ const FoodDetails = () => {
     if (localStorage.getItem("email") === foodItem.donorMail) {
       return;
     }
-    await axios.post(`${import.meta.env.VITE_DEV_URL}/food/requestDonation`, {
+    await axios.post(`https://food-waste-reduction-qy4m.onrender.com/food/requestDonation`, {
       title: foodItem.title,
       userMail: localStorage.getItem("email"),
       donorMail: foodItem.donorMail,
