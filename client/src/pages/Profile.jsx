@@ -15,7 +15,7 @@ const Profile = () => {
     try {
       const email = localStorage.getItem("email");
       await axios.post(
-        `${import.meta.env.VITE_DEV_URL}/auth/logout`,
+        `https://food-waste-reduction-qy4m.onrender.com/auth/logout`,
         { email },
         { withCredentials: true }
       );
