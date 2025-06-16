@@ -102,8 +102,8 @@ export default function LoginOrRegister() {
 
     try {
       const url = isRegister
-        ? `${import.meta.env.VITE_DEV_URL}/auth/register`
-        : `${import.meta.env.VITE_DEV_URL}/auth/login`;
+        ? `https://food-waste-reduction-qy4m.onrender.com/auth/register`
+        : `https://food-waste-reduction-qy4m.onrender.com/auth/login`;
 
       const response = await axios.post(url, formData, {
         withCredentials: true,
