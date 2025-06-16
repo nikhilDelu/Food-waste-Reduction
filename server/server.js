@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: "https://food-waste-reduction-two.vercel.app/", 
+    origin: "https://food-waste-reduction-two.vercel.app", 
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"], 
   })
