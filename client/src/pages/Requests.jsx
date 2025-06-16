@@ -54,7 +54,7 @@ const Requests = () => {
       const userMail = localStorage.getItem("email");
       try {
         const { data } = await axios.post(
-          `${import.meta.env.VITE_DEV_URL}/food/requests`,
+          `https://food-waste-reduction-qy4m.onrender.com/food/requests`,
           { userMail },
           {
             headers: { Authorization: localStorage.getItem("token") },
@@ -72,7 +72,7 @@ const Requests = () => {
   const handleAccept = async (foodItemId) => {
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_DEV_URL}/food/acceptReq`,
+        `https://food-waste-reduction-qy4m.onrender.com/food/acceptReq`,
         {
           id: foodItemId,
           mail: localStorage.getItem("email"),
@@ -99,7 +99,7 @@ const Requests = () => {
   const handleReject = async (foodItemId) => {
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_DEV_URL}/food/rejectReq`,
+        `https://food-waste-reduction-qy4m.onrender.com/food/rejectReq`,
         {
           id: foodItemId,
           mail: localStorage.getItem("email"),
