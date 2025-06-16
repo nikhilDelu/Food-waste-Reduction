@@ -63,7 +63,7 @@ const Add = () => {
       formDataToSend.append("expiryDate", formData.expiryDate);
       formDataToSend.append("file", formData.file);
 
-      const { data } = await axios.post(`${import.meta.env.VITE_DEV_URL}/food/add`, formDataToSend, {
+      const { data } = await axios.post(`https://food-waste-reduction-qy4m.onrender.com/food/add`, formDataToSend, {
         headers: {
           Authorization: localStorage.getItem("token"),
           "Content-Type": "multipart/form-data",
