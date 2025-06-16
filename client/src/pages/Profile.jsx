@@ -32,7 +32,7 @@ const Profile = () => {
     try {
       const email = localStorage.getItem("email");
       const { data } = await axios.get(
-        `${import.meta.env.VITE_DEV_URL}/food/donations?email=${email}`,
+        `https://food-waste-reduction-qy4m.onrender.com/food/donations?email=${email}`,
         {
           headers: { Authorization: localStorage.getItem("token") },
         }
@@ -51,7 +51,7 @@ const Profile = () => {
     try {
       const email = localStorage.getItem("email");
       const { data } = await axios.get(
-        `${import.meta.env.VITE_DEV_URL}/food/claims?email=${email}`,
+        `https://food-waste-reduction-qy4m.onrender.com/food/claims?email=${email}`,
         {
           headers: { Authorization: localStorage.getItem("token") },
         }
@@ -71,7 +71,7 @@ const Profile = () => {
       const email = localStorage.getItem("email");
       const token = localStorage.getItem("token");
       const { data } = await axios.post(
-        `${import.meta.env.VITE_DEV_URL}/auth/notifications`, { email },
+        `https://food-waste-reduction-qy4m.onrender.com/auth/notifications`, { email },
         {
           headers: {
             Authorization: token,
@@ -100,7 +100,7 @@ const Profile = () => {
 
   const handleDeleteNotification = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_DEV_URL}/auth/notifications/${id}`, {
+      await axios.delete(`https://food-waste-reduction-qy4m.onrender.com/auth/notifications/${id}`, {
         headers: { Authorization: localStorage.getItem("token") },
       });
       setNotifications((prev) => prev.filter((notif) => notif._id !== id)); // Remove from state
@@ -112,7 +112,7 @@ const Profile = () => {
   const handleMarkAsRead = async (id) => {
     try {
       await axios.put(
-        `${import.meta.env.VITE_DEV_URL}/auth/notifications/${id}`,
+        `https://food-waste-reduction-qy4m.onrender.com/auth/notifications/${id}`,
         {},
         {
           headers: { Authorization: localStorage.getItem("token") },
